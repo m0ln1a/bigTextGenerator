@@ -87,15 +87,15 @@ Z = "#####", "   # ", "  #  ", " #   ", "#    ", "#####"
 Ю = "# ###", "# # #", "### #", "# # #", "# # #", "# ###"
 Я = "  ###", " #  #", " #  #", "  ###", " #  #", "#   #"
 space = "     ", "     ", "     ", "     ", "     ", "     "
-tochka = "     ", "     ", "     ", "     ", "##   ", "##   "
-zapyat = "     ", "     ", "     ", "     ", " #   ", "#    "
-vopros = " ### ", "#   #", "   # ", "  #  ", "     ", "  #  "
-voskl = "  #  ", "  #  ", "  #  ", "  #  ", "     ", "  #  "
-tire = "     ", "     ", " ### ", "     ", "     ", "     "
+point = "     ", "     ", "     ", "     ", "##   ", "##   "
+comma = "     ", "     ", "     ", "     ", " #   ", "#    "
+question = " ### ", "#   #", "   # ", "  #  ", "     ", "  #  "
+exclamation = "  #  ", "  #  ", "  #  ", "  #  ", "     ", "  #  "
+dash = "     ", "     ", " ### ", "     ", "     ", "     "
 plus = "     ", "  #  ", " ### ", "  #  ", "     ", "     "
-ravno = "     ", "     ", " ### ", " ### ", "     ", "     "
-umnog = "     ", " # # ", "  #  ", " # # ", "     ", "     "
-delit = "   # ", "   # ", "  #  ", "  #  ", " #   ", " #   "
+equal = "     ", "     ", " ### ", " ### ", "     ", "     "
+multiply = "     ", " # # ", "  #  ", " # # ", "     ", "     "
+division = "   # ", "   # ", "  #  ", "  #  ", " #   ", " #   "
 strLeft = "   # ", "  #  ", " #   ", "  #  ", "   # ", "     "
 strRight = " #   ", "  #  ", "   # ", "  #  ", " #   ", "     "
 zero =  "#####", "#   #", "#   #", "#   #", "#   #", "#####"
@@ -110,7 +110,7 @@ eight = "#####", "#   #", "#####", "#   #", "#   #", "#####"
 nine = "#####", "#   #", "#####", "    #", "    #", "#####"
 i_small = "  #  ", "     ", "  #  ", "  #  ", "  #  ", "  #  "
 
-alp = A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,А,Б,В,Г,Д,Е,Ё,Ж,З,И,Й,К,Л,М,Н,О,П,Р,С,Т,У,Ф,Х,Ц,Ч,Ш,Щ,Ъ,Ы,Ь,Э,Ю,Я,space,tochka,zapyat,vopros,voskl,tire,plus,ravno,umnog,delit, strLeft, strRight,zero, one, two, three, four, five, six, seven, eight, nine, i_small
+alp = A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,А,Б,В,Г,Д,Е,Ё,Ж,З,И,Й,К,Л,М,Н,О,П,Р,С,Т,У,Ф,Х,Ц,Ч,Ш,Щ,Ъ,Ы,Ь,Э,Ю,Я,space,point,comma,question,exclamation,dash,plus,equal,multiply,division, strLeft, strRight,zero, one, two, three, four, five, six, seven, eight, nine, i_small
 
 
 def generate_text(wordIn, curve, simbol):
@@ -142,7 +142,7 @@ def main():
         if wordIn == "":
             sys.exit()
         simbol = str(input("Simbol for write (write \"<simbol>\" for use default simbols):  \n>>> "))
-        curve = str(input("Curve? (none, \'<1>\' or \'<2>\') \n>>> "))
+        curve = str(input("Italic? (none, \'<1>\' or \'<2>\') \n>>> "))
         text_for_print = generate_text(wordIn, curve, simbol)
         print(text_for_print)
 
