@@ -1,13 +1,6 @@
 # bigTextGenerator
 
-@   @ @@@@@ @     @     @@@@@              @   @ @@@@@ @@@   @     @@@@    @
-@   @ @     @     @     @   @              @   @ @   @ @  @  @     @   @   @
-@@@@@ @@@@@ @     @     @   @              @   @ @   @ @  @  @     @   @   @
-@   @ @     @     @     @   @              @ @ @ @   @ @@@   @     @   @   @
-@   @ @     @     @     @   @   @          @ @ @ @   @ @  @  @     @   @
-@   @ @@@@@ @@@@@ @@@@@ @@@@@  @            @ @  @@@@@ @   @ @@@@@ @@@@    @
-
-This program can be used for making big ackii-like text.
+This program can be used for making big ascii-like text.
 
 #Usage
 1) You need to write text, which you want to generating
