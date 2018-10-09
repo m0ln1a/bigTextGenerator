@@ -146,5 +146,5 @@ def main():
         text_for_print = generate_text(wordIn, curve, simbol)
         print(text_for_print)
 
-# main process
-main()
+if __name__ == "__main__":
+    main()
