@@ -15,18 +15,22 @@
 
 import sys
 
-wordIn = ""
-simbol = ""
-masterMode = False
+wordIn = "" # string for input text
+simbol = "" # simbol settings
+
+# alphabet to search for the entered letter in the database
 alphabetEng = 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'
 alphabetRus = 'а','б','в','г','д','е','ё','ж','з','и','й','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я'
 alphabetSpecial = ' ', '.', ',', '?', '!', '-', '+', '=', '*', '/', '<', '>'
 alphabetNumbers = '0', '1', '2', '3', '4', '5', '6', '7', '8', '9','|'
 alphabet = alphabetEng + alphabetRus + alphabetSpecial + alphabetNumbers
-wordOut = ""
-wordOutForPrint = ""
-curve = ""
+
+wordOut = "" # output text
+wordOutForPrint = "" # used for generate text in print command
+curve = "" # italic settings
 lenS = 0
+
+# database
 A = " ### ", "#   #", "#   #", "#####", "#   #", "#   #"
 B = "#### ", "#   #", "#### ", "#   #", "#   #", "#### "
 C = "#####", "#    ", "#    ", "#    ", "#    ", "#####"
@@ -110,13 +114,14 @@ eight = "#####", "#   #", "#####", "#   #", "#   #", "#####"
 nine = "#####", "#   #", "#####", "    #", "    #", "#####"
 i_small = "  #  ", "     ", "  #  ", "  #  ", "  #  ", "  #  "
 
+# full char database
 alp = A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,А,Б,В,Г,Д,Е,Ё,Ж,З,И,Й,К,Л,М,Н,О,П,Р,С,Т,У,Ф,Х,Ц,Ч,Ш,Щ,Ъ,Ы,Ь,Э,Ю,Я,space,point,comma,question,exclamation,dash,plus,equal,multiply,division, strLeft, strRight,zero, one, two, three, four, five, six, seven, eight, nine, i_small
 
 
 def generate_text(wordIn, curve, simbol):
     wordOut = ""
-    wordOutForPrint = "" # used for generate text in print command
-    for letterWeight in range(6):
+    wordOutForPrint = "" 
+    for letterWeight in range(6): # print every row
         if curve == "<1>":
             wordOut = wordOut + " " * (6 - letterWeight)
             wordOutForPrint = wordOutForPrint + " " * (6 - letterWeight)
