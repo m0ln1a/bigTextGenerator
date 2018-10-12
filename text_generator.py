@@ -136,7 +136,7 @@ def generate_text(wordIn, curve, simbol):
                 wordOut = wordOut.replace('#', wordIn[letterCount].upper())
                 wordOutForPrint = wordOutForPrint.replace('#', wordIn[letterCount].upper())
 
-        # change simbols
+        # change symbols
         wordOut = wordOut.replace('#', symbol) + "\n"
         wordOutForPrint = wordOutForPrint.replace('#', symbol) + "\\n"
     return wordOut
