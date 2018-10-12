@@ -16,7 +16,7 @@
 import sys
 
 wordIn = "" # string for input text
-simbol = "" # simbol settings
+symbol = "" # symbol settings
 
 # alphabet to search for the entered letter in the database
 alphabetEng = 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'
@@ -132,13 +132,13 @@ def generate_text(wordIn, curve, simbol):
         for letterCount in range(len(wordIn)):
             wordOut = wordOut + alp[alphabet.index(wordIn[letterCount])][letterWeight] + " "
             wordOutForPrint = wordOutForPrint + alp[alphabet.index(wordIn[letterCount])][letterWeight] + " "
-            if simbol == "<simbol>":
+            if symbol == "<symbol>":
                 wordOut = wordOut.replace('#', wordIn[letterCount].upper())
                 wordOutForPrint = wordOutForPrint.replace('#', wordIn[letterCount].upper())
 
         # change simbols
-        wordOut = wordOut.replace('#', simbol) + "\n"
-        wordOutForPrint = wordOutForPrint.replace('#', simbol) + "\\n"
+        wordOut = wordOut.replace('#', symbol) + "\n"
+        wordOutForPrint = wordOutForPrint.replace('#', symbol) + "\\n"
     return wordOut
 
 def main():
@@ -146,9 +146,9 @@ def main():
         wordIn = str(input("Write your text: \n>>> ")).lower()
         if wordIn == "":
             sys.exit()
-        simbol = str(input("Simbol for write (write \"<simbol>\" for use default simbols):  \n>>> "))
+        symbol = str(input("symbol for write (write \"symbol\" for use default symbols):  \n>>> "))
         curve = str(input("Italic? (none, \'<1>\' or \'<2>\') \n>>> "))
-        text_for_print = generate_text(wordIn, curve, simbol)
+        text_for_print = generate_text(wordIn, curve, symbol)
         print(text_for_print)
 
 if __name__ == "__main__":
