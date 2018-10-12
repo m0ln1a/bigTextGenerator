@@ -122,10 +122,10 @@ def generate_text(wordIn, curve, symbol):
     wordOut = ""
     wordOutForPrint = "" 
     for letterWeight in range(6): # print every row
-        if curve == "<1>":
+        if curve == "1":
             wordOut = wordOut + " " * (6 - letterWeight)
             wordOutForPrint = wordOutForPrint + " " * (6 - letterWeight)
-        elif curve == "<2>":
+        elif curve == "2":
             wordOut = wordOut + " " * letterWeight
             wordOutForPrint = wordOutForPrint + " " * letterWeight
 
@@ -147,9 +147,10 @@ def main():
         if wordIn == "":
             sys.exit()
         symbol = str(input("Symbol for write (write \"symbol\" for use default symbols):  \n>>> "))
-        curve = str(input("Italic? (none, \'<1>\' or \'<2>\') \n>>> "))
+        curve = input("Italic? (0: None, 1: Left Slant or 2: Right Slant) \n>>> ")
         text_for_print = generate_text(wordIn, curve, symbol)
         print(text_for_print)
 
 if __name__ == "__main__":
     main()
+
