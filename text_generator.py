@@ -118,7 +118,7 @@ i_small = "  #  ", "     ", "  #  ", "  #  ", "  #  ", "  #  "
 alp = A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,А,Б,В,Г,Д,Е,Ё,Ж,З,И,Й,К,Л,М,Н,О,П,Р,С,Т,У,Ф,Х,Ц,Ч,Ш,Щ,Ъ,Ы,Ь,Э,Ю,Я,space,point,comma,question,exclamation,dash,plus,equal,multiply,division, strLeft, strRight,zero, one, two, three, four, five, six, seven, eight, nine, i_small
 
 
-def generate_text(wordIn, curve, simbol):
+def generate_text(wordIn, curve, symbol):
     wordOut = ""
     wordOutForPrint = "" 
     for letterWeight in range(6): # print every row
@@ -146,7 +146,7 @@ def main():
         wordIn = str(input("Write your text: \n>>> ")).lower()
         if wordIn == "":
             sys.exit()
-        symbol = str(input("symbol for write (write \"symbol\" for use default symbols):  \n>>> "))
+        symbol = str(input("Symbol for write (write \"symbol\" for use default symbols):  \n>>> "))
         curve = str(input("Italic? (none, \'<1>\' or \'<2>\') \n>>> "))
         text_for_print = generate_text(wordIn, curve, symbol)
         print(text_for_print)
